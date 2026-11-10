@@ -1,0 +1,1265 @@
+﻿New https://pypi.org/project/ultralytics/8.4.206 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.0 🚀 Python-3.12.9 torch-2.15.0+cpu CPU (Intel Core(TM) i7-9850H 2.60GHz)
+[34m[1mengine\trainer: [0mtask=detect, mode=train, model=yolov8n.pt, data=../data.yaml, epochs=5, time=None, patience=100, batch=16, imgsz=640, save=True, save_period=-1, cache=False, device=None, workers=8, project=runs, name=problem_detection_v12, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=4, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, label_smoothing=0.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs\problem_detection_v12
+Downloading https://ultralytics.com/assets/Arial.ttf to 'C:\Users\ANDALOS\AppData\Roaming\Ultralytics\Arial.ttf'...
+python.exe : 
+At line:2 char:1
++ & "..\.venv\Scripts\python.exe" train.py --epochs 5 *> "train_run.log ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  0%|          | 0.00/755k [00:00<?, ?B/s]
+ 17%|█▋        | 128k/755k [00:00<00:00, 916kB/s]
+ 51%|█████     | 384k/755k [00:00<00:00, 1.74MB/s]
+100%|██████████| 755k/755k [00:00<00:00, 2.17MB/s]
+100%|██████████| 755k/755k [00:00<00:00, 1.97MB/s]
+Overriding model.yaml nc=80 with nc=3
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]             
+  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]             
+  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]           
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]                 
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 12                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]                 
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 15                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]                  
+ 16                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 18                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]                 
+ 19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]                 
+ 22        [15, 18, 21]  1    431257  ultralytics.nn.modules.head.Detect           [3, [64, 128, 256]]           
+Model summary: 249 layers, 2,690,793 parameters, 2,690,777 gradients, 6.9 GFLOPs
+
+Transferred 313/391 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels...:   0%|          | 0/2815 [00:00<?, ?it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 26 images, 1 backgrounds, 0 corrupt:   1%|          | 26/2815 
+[00:00<00:10, 255.33it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 70 images, 2 backgrounds, 0 corrupt:   2%|▏         | 70/2815 
+[00:00<00:07, 351.74it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 121 images, 4 backgrounds, 0 corrupt:   4%|▍         | 
+121/2815 [00:00<00:06, 406.02it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 167 images, 4 backgrounds, 0 corrupt:   6%|▌         | 
+167/2815 [00:00<00:06, 418.58it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 222 images, 6 backgrounds, 0 corrupt:   8%|▊         | 
+222/2815 [00:00<00:05, 459.50it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 269 images, 6 backgrounds, 0 corrupt:  10%|▉         | 
+269/2815 [00:00<00:05, 459.92it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 317 images, 7 backgrounds, 0 corrupt:  11%|█▏        | 
+317/2815 [00:00<00:05, 461.77it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 364 images, 11 backgrounds, 0 corrupt:  13%|█▎        | 
+364/2815 [00:00<00:05, 458.62it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 413 images, 11 backgrounds, 0 corrupt:  15%|█▍        | 
+413/2815 [00:00<00:05, 464.99it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 462 images, 11 backgrounds, 0 corrupt:  16%|█▋        | 
+462/2815 [00:01<00:04, 472.53it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 510 images, 11 backgrounds, 0 corrupt:  18%|█▊        | 
+510/2815 [00:01<00:04, 462.93it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 557 images, 11 backgrounds, 0 corrupt:  20%|█▉        | 
+557/2815 [00:01<00:04, 454.27it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 606 images, 11 backgrounds, 0 corrupt:  22%|██▏       | 
+606/2815 [00:01<00:04, 457.95it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 655 images, 11 backgrounds, 0 corrupt:  23%|██▎       | 
+655/2815 [00:01<00:04, 462.17it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 704 images, 11 backgrounds, 0 corrupt:  25%|██▌       | 
+704/2815 [00:01<00:04, 465.03it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 751 images, 11 backgrounds, 0 corrupt:  27%|██▋       | 
+751/2815 [00:01<00:04, 443.72it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 796 images, 11 backgrounds, 0 corrupt:  28%|██▊       | 
+796/2815 [00:01<00:04, 433.77it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 842 images, 11 backgrounds, 0 corrupt:  30%|██▉       | 
+842/2815 [00:01<00:04, 441.07it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 890 images, 11 backgrounds, 0 corrupt:  32%|███▏      | 
+890/2815 [00:01<00:04, 447.84it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 943 images, 11 backgrounds, 0 corrupt:  33%|███▎      | 
+943/2815 [00:02<00:03, 468.90it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 991 images, 11 backgrounds, 0 corrupt:  35%|███▌      | 
+991/2815 [00:02<00:03, 469.16it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1039 images, 11 backgrounds, 0 corrupt:  37%|███▋      | 
+1039/2815 [00:02<00:03, 448.04it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1085 images, 11 backgrounds, 0 corrupt:  39%|███▊      | 
+1085/2815 [00:02<00:03, 435.78it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1129 images, 11 backgrounds, 0 corrupt:  40%|████      | 
+1129/2815 [00:02<00:04, 414.19it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1171 images, 11 backgrounds, 0 corrupt:  42%|████▏     | 
+1171/2815 [00:02<00:03, 415.17it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1214 images, 11 backgrounds, 0 corrupt:  43%|████▎     | 
+1214/2815 [00:02<00:03, 411.75it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1256 images, 11 backgrounds, 0 corrupt:  45%|████▍     | 
+1256/2815 [00:02<00:03, 412.92it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1298 images, 11 backgrounds, 0 corrupt:  46%|████▌     | 
+1298/2815 [00:02<00:03, 390.74it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1343 images, 11 backgrounds, 0 corrupt:  48%|████▊     | 
+1343/2815 [00:03<00:03, 399.57it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1384 images, 11 backgrounds, 0 corrupt:  49%|████▉     | 
+1384/2815 [00:03<00:03, 400.77it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1427 images, 11 backgrounds, 0 corrupt:  51%|█████     | 
+1427/2815 [00:03<00:03, 406.79it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1468 images, 11 backgrounds, 0 corrupt:  52%|█████▏    | 
+1468/2815 [00:03<00:03, 401.09it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1510 images, 11 backgrounds, 0 corrupt:  54%|█████▎    | 
+1510/2815 [00:03<00:03, 401.91it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1551 images, 11 backgrounds, 0 corrupt:  55%|█████▌    | 
+1551/2815 [00:03<00:03, 400.34it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1593 images, 11 backgrounds, 0 corrupt:  57%|█████▋    | 
+1593/2815 [00:03<00:03, 399.60it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1639 images, 11 backgrounds, 0 corrupt:  58%|█████▊    | 
+1639/2815 [00:03<00:02, 416.50it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1688 images, 11 backgrounds, 0 corrupt:  60%|█████▉    | 
+1688/2815 [00:03<00:02, 432.70it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1736 images, 11 backgrounds, 0 corrupt:  62%|██████▏   | 
+1736/2815 [00:04<00:02, 445.76it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1783 images, 11 backgrounds, 0 corrupt:  63%|██████▎   | 
+1783/2815 [00:04<00:02, 441.82it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1828 images, 11 backgrounds, 0 corrupt:  65%|██████▍   | 
+1828/2815 [00:04<00:02, 431.65it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1872 images, 11 backgrounds, 0 corrupt:  67%|██████▋   | 
+1872/2815 [00:04<00:02, 434.02it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1916 images, 11 backgrounds, 0 corrupt:  68%|██████▊   | 
+1916/2815 [00:04<00:02, 435.76it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 1960 images, 11 backgrounds, 0 corrupt:  70%|██████▉   | 
+1960/2815 [00:04<00:01, 428.25it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2013 images, 11 backgrounds, 0 corrupt:  72%|███████▏  | 
+2013/2815 [00:04<00:01, 448.06it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2058 images, 11 backgrounds, 0 corrupt:  73%|███████▎  | 
+2058/2815 [00:04<00:01, 435.35it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2103 images, 11 backgrounds, 0 corrupt:  75%|███████▍  | 
+2103/2815 [00:04<00:01, 437.04it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2147 images, 11 backgrounds, 0 corrupt:  76%|███████▋  | 
+2147/2815 [00:04<00:01, 432.22it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2190 images, 11 backgrounds, 1 corrupt:  78%|███████▊  | 
+2191/2815 [00:05<00:01, 415.02it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2232 images, 11 backgrounds, 1 corrupt:  79%|███████▉  | 
+2233/2815 [00:05<00:01, 413.46it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2274 images, 11 backgrounds, 1 corrupt:  81%|████████  | 
+2275/2815 [00:05<00:01, 411.79it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2316 images, 11 backgrounds, 1 corrupt:  82%|████████▏ | 
+2317/2815 [00:05<00:01, 407.98it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2358 images, 11 backgrounds, 1 corrupt:  84%|████████▍ | 
+2359/2815 [00:05<00:01, 409.09it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2399 images, 11 backgrounds, 1 corrupt:  85%|████████▌ | 
+2400/2815 [00:05<00:01, 404.76it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2440 images, 11 backgrounds, 1 corrupt:  87%|████████▋ | 
+2441/2815 [00:05<00:00, 394.85it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2483 images, 11 backgrounds, 1 corrupt:  88%|████████▊ | 
+2484/2815 [00:05<00:00, 397.49it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2530 images, 11 backgrounds, 1 corrupt:  90%|████████▉ | 
+2531/2815 [00:05<00:00, 408.76it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2574 images, 11 backgrounds, 1 corrupt:  91%|█████████▏| 
+2575/2815 [00:06<00:00, 415.23it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2616 images, 11 backgrounds, 1 corrupt:  93%|█████████▎| 
+2617/2815 [00:06<00:00, 396.79it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2656 images, 11 backgrounds, 1 corrupt:  94%|█████████▍| 
+2657/2815 [00:06<00:00, 387.82it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2697 images, 11 backgrounds, 1 corrupt:  96%|█████████▌| 
+2698/2815 [00:06<00:00, 380.53it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2740 images, 11 backgrounds, 1 corrupt:  97%|█████████▋| 
+2741/2815 [00:06<00:00, 388.37it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2779 images, 11 backgrounds, 1 corrupt:  99%|█████████▉| 
+2780/2815 [00:06<00:00, 388.24it/s]
+[34m[1mtrain: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\train\labels... 2814 images, 11 backgrounds, 1 corrupt: 100%|██████████| 
+2815/2815 [00:06<00:00, 422.56it/s]
+[34m[1mtrain: [0mWARNING ⚠️ C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\puddle detection3\train\images\image483_jpeg.rf.3b4f86b0200725e5ed9b48ca8d0a3330.jpg: ignoring corrupt image/label: image file is truncated (9 bytes not processed)
+[34m[1mtrain: [0mNew cache created: C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage detection1\Garbage Detection.v1i.yolov8\train\labels.cache
+WARNING ⚠️ Box and segment counts should be equal, but got len(segments) = 38, len(boxes) = 4818. To resolve this only boxes will be used and all segments will be removed. To avoid this please supply either a detect or segment dataset, not a detect-segment mixed dataset.
+C:\Users\ANDALOS\Desktop\مشروع التخرج\ai-track\.venv\Lib\site-packages\torch\utils\data\dataloader.py:759: 
+UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+
+[34m[1mval: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\valid\labels...:   0%|          | 0/533 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\valid\labels... 41 images, 3 backgrounds, 0 corrupt:   8%|▊         | 41/533 
+[00:00<00:01, 390.21it/s]
+[34m[1mval: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\valid\labels... 81 images, 3 backgrounds, 0 corrupt:  15%|█▌        | 81/533 
+[00:00<00:01, 395.85it/s]
+[34m[1mval: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\valid\labels... 122 images, 3 backgrounds, 0 corrupt:  23%|██▎       | 122/533 
+[00:00<00:01, 393.57it/s]
+[34m[1mval: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\valid\labels... 162 images, 3 backgrounds, 0 corrupt:  30%|███       | 162/533 
+[00:00<00:00, 384.24it/s]
+[34m[1mval: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\valid\labels... 204 images, 3 backgrounds, 0 corrupt:  38%|███▊      | 204/533 
+[00:00<00:00, 395.99it/s]
+[34m[1mval: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\valid\labels... 246 images, 3 backgrounds, 0 corrupt:  46%|████▌     | 246/533 
+[00:00<00:00, 395.88it/s]
+[34m[1mval: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\valid\labels... 290 images, 3 backgrounds, 0 corrupt:  54%|█████▍    | 290/533 
+[00:00<00:00, 406.61it/s]
+[34m[1mval: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\valid\labels... 332 images, 3 backgrounds, 0 corrupt:  62%|██████▏   | 332/533 
+[00:00<00:00, 410.27it/s]
+[34m[1mval: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\valid\labels... 375 images, 3 backgrounds, 0 corrupt:  70%|███████   | 375/533 
+[00:00<00:00, 413.12it/s]
+[34m[1mval: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\valid\labels... 417 images, 3 backgrounds, 0 corrupt:  78%|███████▊  | 417/533 
+[00:01<00:00, 407.13it/s]
+[34m[1mval: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\valid\labels... 458 images, 3 backgrounds, 0 corrupt:  86%|████████▌ | 458/533 
+[00:01<00:00, 401.22it/s]
+[34m[1mval: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\valid\labels... 502 images, 3 backgrounds, 0 corrupt:  94%|█████████▍| 502/533 
+[00:01<00:00, 411.42it/s]
+[34m[1mval: [0mScanning C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage 
+detection1\Garbage Detection.v1i.yolov8\valid\labels... 533 images, 3 backgrounds, 0 corrupt: 100%|██████████| 533/533 
+[00:01<00:00, 403.44it/s]
+[34m[1mval: [0mNew cache created: C:\Users\ANDALOS\Desktop\مشروع التخرج\phase 2 _ data set\dataset\dataset\Garbage detection1\Garbage Detection.v1i.yolov8\valid\labels.cache
+WARNING ⚠️ Box and segment counts should be equal, but got len(segments) = 1, len(boxes) = 937. To resolve this only boxes will be used and all segments will be removed. To avoid this please supply either a detect or segment dataset, not a detect-segment mixed dataset.
+Plotting labels to runs\problem_detection_v12\labels.jpg... 
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
+[34m[1moptimizer:[0m AdamW(lr=0.001429, momentum=0.9) with parameter groups 63 weight(decay=0.0), 70 weight(decay=0.0005), 69 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 0 dataloader workers
+Logging results to [1mruns\problem_detection_v12[0m
+Starting training for 5 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+
+  0%|          | 0/176 [00:00<?, ?it/s]
+        1/5         0G      1.767       3.72      2.072         40        640:   0%|          | 0/176 [00:09<?, ?it/s]
+        1/5         0G      1.767       3.72      2.072         40        640:   1%|          | 1/176 [00:09<28:30,  
+9.77s/it]
+        1/5         0G      1.962      3.858       2.12         39        640:   1%|          | 1/176 [00:18<28:30,  
+9.77s/it]
+        1/5         0G      1.962      3.858       2.12         39        640:   1%|          | 2/176 [00:18<26:35,  
+9.17s/it]
+        1/5         0G       1.98      3.995      2.121         33        640:   1%|          | 2/176 [00:27<26:35,  
+9.17s/it]
+        1/5         0G       1.98      3.995      2.121         33        640:   2%|▏         | 3/176 [00:27<26:28,  
+9.18s/it]
+        1/5         0G      1.917       3.93      2.062         44        640:   2%|▏         | 3/176 [00:36<26:28,  
+9.18s/it]
+        1/5         0G      1.917       3.93      2.062         44        640:   2%|▏         | 4/176 [00:36<25:36,  
+8.93s/it]
+        1/5         0G      1.879      3.921      2.014         38        640:   2%|▏         | 4/176 [00:44<25:36,  
+8.93s/it]
+        1/5         0G      1.879      3.921      2.014         38        640:   3%|▎         | 5/176 [00:44<24:38,  
+8.65s/it]
+        1/5         0G      1.864      3.938      1.997         44        640:   3%|▎         | 5/176 [00:52<24:38,  
+8.65s/it]
+        1/5         0G      1.864      3.938      1.997         44        640:   3%|▎         | 6/176 [00:52<23:52,  
+8.43s/it]
+        1/5         0G      1.877      3.937      2.008         39        640:   3%|▎         | 6/176 [01:00<23:52,  
+8.43s/it]
+        1/5         0G      1.877      3.937      2.008         39        640:   4%|▍         | 7/176 [01:00<23:11,  
+8.23s/it]
+        1/5         0G       1.88      3.926      2.006         53        640:   4%|▍         | 7/176 [01:08<23:11,  
+8.23s/it]
+        1/5         0G       1.88      3.926      2.006         53        640:   5%|▍         | 8/176 [01:08<22:55,  
+8.19s/it]
+        1/5         0G      1.865      3.929      1.976         53        640:   5%|▍         | 8/176 [01:16<22:55,  
+8.19s/it]
+        1/5         0G      1.865      3.929      1.976         53        640:   5%|▌         | 9/176 [01:16<22:22,  
+8.04s/it]
+        1/5         0G      1.852      3.934      1.959         40        640:   5%|▌         | 9/176 [01:24<22:22,  
+8.04s/it]
+        1/5         0G      1.852      3.934      1.959         40        640:   6%|▌         | 10/176 [01:24<22:19,  
+8.07s/it]
+        1/5         0G      1.829      3.915      1.938         47        640:   6%|▌         | 10/176 [01:32<22:19,  
+8.07s/it]
+        1/5         0G      1.829      3.915      1.938         47        640:   6%|▋         | 11/176 [01:32<22:42,  
+8.26s/it]
+        1/5         0G      1.821      3.919      1.921         50        640:   6%|▋         | 11/176 [01:39<22:42,  
+8.26s/it]
+        1/5         0G      1.821      3.919      1.921         50        640:   7%|▋         | 12/176 [01:39<21:34,  
+7.90s/it]
+        1/5         0G      1.827      3.922      1.928         42        640:   7%|▋         | 12/176 [01:47<21:34,  
+7.90s/it]
+        1/5         0G      1.827      3.922      1.928         42        640:   7%|▋         | 13/176 [01:47<20:49,  
+7.67s/it]
+        1/5         0G      1.822       3.91      1.924         41        640:   7%|▋         | 13/176 [01:54<20:49,  
+7.67s/it]
+        1/5         0G      1.822       3.91      1.924         41        640:   8%|▊         | 14/176 [01:54<20:53,  
+7.74s/it]
+        1/5         0G      1.824      3.896       1.91         89        640:   8%|▊         | 14/176 [02:02<20:53,  
+7.74s/it]
+        1/5         0G      1.824      3.896       1.91         89        640:   9%|▊         | 15/176 [02:02<20:26,  
+7.62s/it]
+        1/5         0G      1.808      3.884      1.895         56        640:   9%|▊         | 15/176 [02:09<20:26,  
+7.62s/it]
+        1/5         0G      1.808      3.884      1.895         56        640:   9%|▉         | 16/176 [02:09<20:07,  
+7.55s/it]
+        1/5         0G        1.8      3.875      1.878         63        640:   9%|▉         | 16/176 [02:16<20:07,  
+7.55s/it]
+        1/5         0G        1.8      3.875      1.878         63        640:  10%|▉         | 17/176 [02:16<19:45,  
+7.46s/it]
+        1/5         0G        1.8      3.871      1.883         49        640:  10%|▉         | 17/176 [02:24<19:45,  
+7.46s/it]
+        1/5         0G        1.8      3.871      1.883         49        640:  10%|█         | 18/176 [02:24<19:25,  
+7.38s/it]
+        1/5         0G      1.798      3.867      1.883         61        640:  10%|█         | 18/176 [02:32<19:25,  
+7.38s/it]
+        1/5         0G      1.798      3.867      1.883         61        640:  11%|█         | 19/176 [02:32<19:56,  
+7.62s/it]
+        1/5         0G      1.787      3.859      1.877         57        640:  11%|█         | 19/176 [02:43<19:56,  
+7.62s/it]
+        1/5         0G      1.787      3.859      1.877         57        640:  11%|█▏        | 20/176 [02:43<22:15,  
+8.56s/it]
+        1/5         0G      1.784      3.848       1.87         61        640:  11%|█▏        | 20/176 [02:51<22:15,  
+8.56s/it]
+        1/5         0G      1.784      3.848       1.87         61        640:  12%|█▏        | 21/176 [02:51<21:41,  
+8.40s/it]
+        1/5         0G      1.772       3.84      1.863         54        640:  12%|█▏        | 21/176 [02:59<21:41,  
+8.40s/it]
+        1/5         0G      1.772       3.84      1.863         54        640:  12%|█▎        | 22/176 [02:59<21:51,  
+8.51s/it]
+        1/5         0G      1.765      3.837      1.857         46        640:  12%|█▎        | 22/176 [03:08<21:51,  
+8.51s/it]
+        1/5         0G      1.765      3.837      1.857         46        640:  13%|█▎        | 23/176 [03:08<21:55,  
+8.60s/it]
+        1/5         0G      1.759      3.839      1.857         48        640:  13%|█▎        | 23/176 [03:17<21:55,  
+8.60s/it]
+        1/5         0G      1.759      3.839      1.857         48        640:  14%|█▎        | 24/176 [03:17<22:03,  
+8.71s/it]
+        1/5         0G      1.752      3.833      1.846         67        640:  14%|█▎        | 24/176 [03:25<22:03,  
+8.71s/it]
+        1/5         0G      1.752      3.833      1.846         67        640:  14%|█▍        | 25/176 [03:25<21:16,  
+8.45s/it]
+        1/5         0G      1.756      3.829      1.844         62        640:  14%|█▍        | 25/176 [03:32<21:16,  
+8.45s/it]
+        1/5         0G      1.756      3.829      1.844         62        640:  15%|█▍        | 26/176 [03:32<20:04,  
+8.03s/it]
+        1/5         0G      1.753      3.825      1.841         55        640:  15%|█▍        | 26/176 [03:40<20:04,  
+8.03s/it]
+        1/5         0G      1.753      3.825      1.841         55        640:  15%|█▌        | 27/176 [03:40<19:32,  
+7.87s/it]
+        1/5         0G      1.751      3.825      1.835         58        640:  15%|█▌        | 27/176 [03:47<19:32,  
+7.87s/it]
+        1/5         0G      1.751      3.825      1.835         58        640:  16%|█▌        | 28/176 [03:47<19:27,  
+7.89s/it]
+        1/5         0G      1.746      3.826      1.829         51        640:  16%|█▌        | 28/176 [03:55<19:27,  
+7.89s/it]
+        1/5         0G      1.746      3.826      1.829         51        640:  16%|█▋        | 29/176 [03:55<19:18,  
+7.88s/it]
+        1/5         0G      1.746      3.822      1.828         52        640:  16%|█▋        | 29/176 [04:03<19:18,  
+7.88s/it]
+        1/5         0G      1.746      3.822      1.828         52        640:  17%|█▋        | 30/176 [04:03<18:53,  
+7.76s/it]
+        1/5         0G      1.747      3.821      1.825         52        640:  17%|█▋        | 30/176 [04:10<18:53,  
+7.76s/it]
+        1/5         0G      1.747      3.821      1.825         52        640:  18%|█▊        | 31/176 [04:10<18:35,  
+7.69s/it]
+        1/5         0G      1.744      3.812      1.821         59        640:  18%|█▊        | 31/176 [04:18<18:35,  
+7.69s/it]
+        1/5         0G      1.744      3.812      1.821         59        640:  18%|█▊        | 32/176 [04:18<18:21,  
+7.65s/it]
+        1/5         0G      1.736      3.807      1.813         64        640:  18%|█▊        | 32/176 [04:25<18:21,  
+7.65s/it]
+        1/5         0G      1.736      3.807      1.813         64        640:  19%|█▉        | 33/176 [04:25<18:07,  
+7.60s/it]
+        1/5         0G      1.737      3.811      1.811         63        640:  19%|█▉        | 33/176 [04:33<18:07,  
+7.60s/it]
+        1/5         0G      1.737      3.811      1.811         63        640:  19%|█▉        | 34/176 [04:33<18:05,  
+7.64s/it]
+        1/5         0G      1.739      3.805      1.809         55        640:  19%|█▉        | 34/176 [04:41<18:05,  
+7.64s/it]
+        1/5         0G      1.739      3.805      1.809         55        640:  20%|█▉        | 35/176 [04:41<18:02,  
+7.68s/it]
+        1/5         0G      1.737        3.8      1.806         50        640:  20%|█▉        | 35/176 [04:48<18:02,  
+7.68s/it]
+        1/5         0G      1.737        3.8      1.806         50        640:  20%|██        | 36/176 [04:48<17:26,  
+7.48s/it]
+        1/5         0G      1.731       3.79      1.802         61        640:  20%|██        | 36/176 [04:55<17:26,  
+7.48s/it]
+        1/5         0G      1.731       3.79      1.802         61        640:  21%|██        | 37/176 [04:55<17:00,  
+7.34s/it]
+        1/5         0G      1.726      3.785      1.803         37        640:  21%|██        | 37/176 [05:02<17:00,  
+7.34s/it]
+        1/5         0G      1.726      3.785      1.803         37        640:  22%|██▏       | 38/176 [05:02<16:39,  
+7.24s/it]
+        1/5         0G      1.725      3.778        1.8         57        640:  22%|██▏       | 38/176 [05:09<16:39,  
+7.24s/it]
+        1/5         0G      1.725      3.778        1.8         57        640:  22%|██▏       | 39/176 [05:09<16:31,  
+7.24s/it]
+        1/5         0G       1.72      3.771      1.797         67        640:  22%|██▏       | 39/176 [05:16<16:31,  
+7.24s/it]
+        1/5         0G       1.72      3.771      1.797         67        640:  23%|██▎       | 40/176 [05:16<16:20,  
+7.21s/it]
+        1/5         0G      1.714      3.767      1.793         42        640:  23%|██▎       | 40/176 [05:23<16:20,  
+7.21s/it]
+        1/5         0G      1.714      3.767      1.793         42        640:  23%|██▎       | 41/176 [05:23<16:08,  
+7.17s/it]
+        1/5         0G      1.706      3.763       1.79         49        640:  23%|██▎       | 41/176 [05:30<16:08,  
+7.17s/it]
+        1/5         0G      1.706      3.763       1.79         49        640:  24%|██▍       | 42/176 [05:30<15:50,  
+7.09s/it]
+        1/5         0G        1.7      3.757      1.784         47        640:  24%|██▍       | 42/176 [05:37<15:50,  
+7.09s/it]
+        1/5         0G        1.7      3.757      1.784         47        640:  24%|██▍       | 43/176 [05:37<15:39,  
+7.06s/it]
+        1/5         0G      1.696      3.749      1.783         53        640:  24%|██▍       | 43/176 [05:44<15:39,  
+7.06s/it]
+        1/5         0G      1.696      3.749      1.783         53        640:  25%|██▌       | 44/176 [05:44<15:28,  
+7.03s/it]
+        1/5         0G      1.688      3.743      1.778         55        640:  25%|██▌       | 44/176 [05:51<15:28,  
+7.03s/it]
+        1/5         0G      1.688      3.743      1.778         55        640:  26%|██▌       | 45/176 [05:51<15:22,  
+7.04s/it]
+        1/5         0G      1.687       3.74      1.774         63        640:  26%|██▌       | 45/176 [05:58<15:22,  
+7.04s/it]
+        1/5         0G      1.687       3.74      1.774         63        640:  26%|██▌       | 46/176 [05:58<15:20,  
+7.08s/it]
+        1/5         0G       1.68      3.732       1.77         53        640:  26%|██▌       | 46/176 [06:06<15:20,  
+7.08s/it]
+        1/5         0G       1.68      3.732       1.77         53        640:  27%|██▋       | 47/176 [06:06<15:13,  
+7.08s/it]
+        1/5         0G      1.678      3.724       1.77         46        640:  27%|██▋       | 47/176 [06:13<15:13,  
+7.08s/it]
+        1/5         0G      1.678      3.724       1.77         46        640:  27%|██▋       | 48/176 [06:13<15:09,  
+7.11s/it]
+        1/5         0G      1.674      3.719      1.767         52        640:  27%|██▋       | 48/176 [06:20<15:09,  
+7.11s/it]
+        1/5         0G      1.674      3.719      1.767         52        640:  28%|██▊       | 49/176 [06:20<15:26,  
+7.30s/it]
+        1/5         0G      1.671      3.711      1.763         64        640:  28%|██▊       | 49/176 [06:28<15:26,  
+7.30s/it]
+        1/5         0G      1.671      3.711      1.763         64        640:  28%|██▊       | 50/176 [06:28<15:36,  
+7.43s/it]
+        1/5         0G      1.668      3.703      1.761         39        640:  28%|██▊       | 50/176 [06:36<15:36,  
+7.43s/it]
+        1/5         0G      1.668      3.703      1.761         39        640:  29%|██▉       | 51/176 [06:36<15:56,  
+7.65s/it]
+        1/5         0G      1.665      3.698      1.757         68        640:  29%|██▉       | 51/176 [06:46<15:56,  
+7.65s/it]
+        1/5         0G      1.665      3.698      1.757         68        640:  30%|██▉       | 52/176 [06:46<16:44,  
+8.10s/it]
+        1/5         0G      1.665      3.693      1.755         57        640:  30%|██▉       | 52/176 [06:54<16:44,  
+8.10s/it]
+        1/5         0G      1.665      3.693      1.755         57        640:  30%|███       | 53/176 [06:54<16:42,  
+8.15s/it]
+        1/5         0G      1.663      3.688      1.751         50        640:  30%|███       | 53/176 [07:04<16:42,  
+8.15s/it]
+        1/5         0G      1.663      3.688      1.751         50        640:  31%|███       | 54/176 [07:04<17:58,  
+8.84s/it]
+        1/5         0G       1.66      3.681      1.749         46        640:  31%|███       | 54/176 [07:13<17:58,  
+8.84s/it]
+        1/5         0G       1.66      3.681      1.749         46        640:  31%|███▏      | 55/176 [07:13<18:01,  
+8.94s/it]
+        1/5         0G      1.658      3.675      1.748         54        640:  31%|███▏      | 55/176 [07:27<18:01,  
+8.94s/it]
+        1/5         0G      1.658      3.675      1.748         54        640:  32%|███▏      | 56/176 [07:27<20:57, 
+10.48s/it]
+        1/5         0G      1.656       3.67      1.746         53        640:  32%|███▏      | 56/176 [07:39<20:57, 
+10.48s/it]
+        1/5         0G      1.656       3.67      1.746         53        640:  32%|███▏      | 57/176 [07:39<21:29, 
+10.83s/it]
+        1/5         0G      1.656      3.663      1.745         52        640:  32%|███▏      | 57/176 [07:51<21:29, 
+10.83s/it]
+        1/5         0G      1.656      3.663      1.745         52        640:  33%|███▎      | 58/176 [07:51<21:57, 
+11.16s/it]
+        1/5         0G      1.655      3.661      1.741         88        640:  33%|███▎      | 58/176 [08:01<21:57, 
+11.16s/it]
+        1/5         0G      1.655      3.661      1.741         88        640:  34%|███▎      | 59/176 [08:01<20:54, 
+10.72s/it]
+        1/5         0G      1.654      3.656      1.736        107        640:  34%|███▎      | 59/176 [08:11<20:54, 
+10.72s/it]
+        1/5         0G      1.654      3.656      1.736        107        640:  34%|███▍      | 60/176 [08:11<20:36, 
+10.66s/it]
+        1/5         0G      1.651      3.648      1.733         49        640:  34%|███▍      | 60/176 [08:22<20:36, 
+10.66s/it]
+        1/5         0G      1.651      3.648      1.733         49        640:  35%|███▍      | 61/176 [08:22<20:10, 
+10.53s/it]
+        1/5         0G       1.65      3.642      1.731         57        640:  35%|███▍      | 61/176 [08:31<20:10, 
+10.53s/it]
+        1/5         0G       1.65      3.642      1.731         57        640:  35%|███▌      | 62/176 [08:31<19:10, 
+10.09s/it]
+        1/5         0G      1.651      3.638       1.73         67        640:  35%|███▌      | 62/176 [08:39<19:10, 
+10.09s/it]
+        1/5         0G      1.651      3.638       1.73         67        640:  36%|███▌      | 63/176 [08:39<18:12,  
+9.67s/it]
+        1/5         0G      1.652      3.633       1.73         50        640:  36%|███▌      | 63/176 [08:48<18:12,  
+9.67s/it]
+        1/5         0G      1.652      3.633       1.73         50        640:  36%|███▋      | 64/176 [08:48<17:27,  
+9.35s/it]
+        1/5         0G      1.654      3.628      1.729         75        640:  36%|███▋      | 64/176 [08:56<17:27,  
+9.35s/it]
+        1/5         0G      1.654      3.628      1.729         75        640:  37%|███▋      | 65/176 [08:56<16:40,  
+9.01s/it]
+        1/5         0G      1.655      3.622      1.728         68        640:  37%|███▋      | 65/176 [09:04<16:40,  
+9.01s/it]
+        1/5         0G      1.655      3.622      1.728         68        640:  38%|███▊      | 66/176 [09:04<16:07,  
+8.80s/it]
+        1/5         0G      1.655      3.614      1.727         73        640:  38%|███▊      | 66/176 [09:13<16:07,  
+8.80s/it]
+        1/5         0G      1.655      3.614      1.727         73        640:  38%|███▊      | 67/176 [09:13<15:44,  
+8.67s/it]
+        1/5         0G      1.655      3.607      1.725         71        640:  38%|███▊      | 67/176 [09:21<15:44,  
+8.67s/it]
+        1/5         0G      1.655      3.607      1.725         71        640:  39%|███▊      | 68/176 [09:21<15:31,  
+8.62s/it]
+        1/5         0G      1.654      3.601      1.724         79        640:  39%|███▊      | 68/176 [09:32<15:31,  
+8.62s/it]
+        1/5         0G      1.654      3.601      1.724         79        640:  39%|███▉      | 69/176 [09:32<16:24,  
+9.20s/it]
+        1/5         0G      1.655      3.594      1.722         82        640:  39%|███▉      | 69/176 [09:40<16:24,  
+9.20s/it]
+        1/5         0G      1.655      3.594      1.722         82        640:  40%|███▉      | 70/176 [09:40<15:49,  
+8.96s/it]
+        1/5         0G      1.654       3.59      1.721         39        640:  40%|███▉      | 70/176 [09:48<15:49,  
+8.96s/it]
+        1/5         0G      1.654       3.59      1.721         39        640:  40%|████      | 71/176 [09:48<15:18,  
+8.75s/it]
+        1/5         0G      1.652      3.581      1.721         44        640:  40%|████      | 71/176 [09:57<15:18,  
+8.75s/it]
+        1/5         0G      1.652      3.581      1.721         44        640:  41%|████      | 72/176 [09:57<15:06,  
+8.71s/it]
+        1/5         0G       1.65      3.571      1.718         67        640:  41%|████      | 72/176 [10:06<15:06,  
+8.71s/it]
+        1/5         0G       1.65      3.571      1.718         67        640:  41%|████▏     | 73/176 [10:06<14:49,  
+8.63s/it]
+        1/5         0G      1.648      3.563      1.717         48        640:  41%|████▏     | 73/176 [10:14<14:49,  
+8.63s/it]
+        1/5         0G      1.648      3.563      1.717         48        640:  42%|████▏     | 74/176 [10:14<14:33,  
+8.56s/it]
+        1/5         0G      1.647      3.554      1.717         43        640:  42%|████▏     | 74/176 [10:22<14:33,  
+8.56s/it]
+        1/5         0G      1.647      3.554      1.717         43        640:  43%|████▎     | 75/176 [10:22<14:23,  
+8.55s/it]
+        1/5         0G      1.647      3.547      1.717         61        640:  43%|████▎     | 75/176 [10:31<14:23,  
+8.55s/it]
+        1/5         0G      1.647      3.547      1.717         61        640:  43%|████▎     | 76/176 [10:31<14:07,  
+8.47s/it]
+        1/5         0G      1.648      3.541      1.716         49        640:  43%|████▎     | 76/176 [10:39<14:07,  
+8.47s/it]
+        1/5         0G      1.648      3.541      1.716         49        640:  44%|████▍     | 77/176 [10:39<13:48,  
+8.37s/it]
+        1/5         0G      1.645      3.533      1.715         46        640:  44%|████▍     | 77/176 [10:47<13:48,  
+8.37s/it]
+        1/5         0G      1.645      3.533      1.715         46        640:  44%|████▍     | 78/176 [10:47<13:33,  
+8.30s/it]
+        1/5         0G      1.644      3.526      1.714         57        640:  44%|████▍     | 78/176 [10:55<13:33,  
+8.30s/it]
+        1/5         0G      1.644      3.526      1.714         57        640:  45%|████▍     | 79/176 [10:55<13:29,  
+8.35s/it]
+        1/5         0G      1.645      3.519      1.714         55        640:  45%|████▍     | 79/176 [11:04<13:29,  
+8.35s/it]
+        1/5         0G      1.645      3.519      1.714         55        640:  45%|████▌     | 80/176 [11:04<13:18,  
+8.31s/it]
+        1/5         0G      1.643      3.511      1.714         49        640:  45%|████▌     | 80/176 [11:12<13:18,  
+8.31s/it]
+        1/5         0G      1.643      3.511      1.714         49        640:  46%|████▌     | 81/176 [11:12<13:18,  
+8.40s/it]
+        1/5         0G      1.641      3.504      1.712         50        640:  46%|████▌     | 81/176 [11:21<13:18,  
+8.40s/it]
+        1/5         0G      1.641      3.504      1.712         50        640:  47%|████▋     | 82/176 [11:21<13:10,  
+8.41s/it]
+        1/5         0G      1.642      3.495      1.711         58        640:  47%|████▋     | 82/176 [11:29<13:10,  
+8.41s/it]
+        1/5         0G      1.642      3.495      1.711         58        640:  47%|████▋     | 83/176 [11:29<13:02,  
+8.41s/it]
+        1/5         0G      1.641      3.488       1.71         55        640:  47%|████▋     | 83/176 [11:37<13:02,  
+8.41s/it]
+        1/5         0G      1.641      3.488       1.71         55        640:  48%|████▊     | 84/176 [11:37<12:48,  
+8.35s/it]
+        1/5         0G      1.642       3.48      1.709         60        640:  48%|████▊     | 84/176 [11:46<12:48,  
+8.35s/it]
+        1/5         0G      1.642       3.48      1.709         60        640:  48%|████▊     | 85/176 [11:46<12:36,  
+8.31s/it]
+        1/5         0G      1.641       3.47      1.709         50        640:  48%|████▊     | 85/176 [11:54<12:36,  
+8.31s/it]
+        1/5         0G      1.641       3.47      1.709         50        640:  49%|████▉     | 86/176 [11:54<12:23,  
+8.27s/it]
+        1/5         0G      1.642      3.463      1.708         51        640:  49%|████▉     | 86/176 [12:02<12:23,  
+8.27s/it]
+        1/5         0G      1.642      3.463      1.708         51        640:  49%|████▉     | 87/176 [12:02<12:10,  
+8.21s/it]
+        1/5         0G      1.641      3.456      1.708         52        640:  49%|████▉     | 87/176 [12:10<12:10,  
+8.21s/it]
+        1/5         0G      1.641      3.456      1.708         52        640:  50%|█████     | 88/176 [12:10<12:02,  
+8.21s/it]
+        1/5         0G       1.64      3.449      1.706         61        640:  50%|█████     | 88/176 [12:18<12:02,  
+8.21s/it]
+        1/5         0G       1.64      3.449      1.706         61        640:  51%|█████     | 89/176 [12:18<11:55,  
+8.23s/it]
+        1/5         0G      1.639      3.442      1.704         45        640:  51%|█████     | 89/176 [12:27<11:55,  
+8.23s/it]
+        1/5         0G      1.639      3.442      1.704         45        640:  51%|█████     | 90/176 [12:27<11:51,  
+8.28s/it]
+        1/5         0G      1.642       3.44      1.706         45        640:  51%|█████     | 90/176 [12:35<11:51,  
+8.28s/it]
+        1/5         0G      1.642       3.44      1.706         45        640:  52%|█████▏    | 91/176 [12:35<11:41,  
+8.25s/it]
+        1/5         0G      1.641      3.433      1.706         52        640:  52%|█████▏    | 91/176 [12:43<11:41,  
+8.25s/it]
+        1/5         0G      1.641      3.433      1.706         52        640:  52%|█████▏    | 92/176 [12:43<11:31,  
+8.23s/it]
+        1/5         0G      1.641      3.425      1.707         43        640:  52%|█████▏    | 92/176 [12:51<11:31,  
+8.23s/it]
+        1/5         0G      1.641      3.425      1.707         43        640:  53%|█████▎    | 93/176 [12:51<11:18,  
+8.18s/it]
+        1/5         0G      1.641       3.42      1.706         40        640:  53%|█████▎    | 93/176 [12:59<11:18,  
+8.18s/it]
+        1/5         0G      1.641       3.42      1.706         40        640:  53%|█████▎    | 94/176 [12:59<11:08,  
+8.16s/it]
+        1/5         0G       1.64      3.417      1.708         37        640:  53%|█████▎    | 94/176 [13:07<11:08,  
+8.16s/it]
+        1/5         0G       1.64      3.417      1.708         37        640:  54%|█████▍    | 95/176 [13:07<10:58,  
+8.14s/it]
+        1/5         0G      1.639       3.41      1.708         42        640:  54%|█████▍    | 95/176 [13:16<10:58,  
+8.14s/it]
+        1/5         0G      1.639       3.41      1.708         42        640:  55%|█████▍    | 96/176 [13:16<10:54,  
+8.18s/it]
+        1/5         0G      1.638      3.404      1.708         57        640:  55%|█████▍    | 96/176 [13:24<10:54,  
+8.18s/it]
+        1/5         0G      1.638      3.404      1.708         57        640:  55%|█████▌    | 97/176 [13:24<10:50,  
+8.23s/it]
+        1/5         0G      1.638      3.397      1.707         52        640:  55%|█████▌    | 97/176 [13:32<10:50,  
+8.23s/it]
+        1/5         0G      1.638      3.397      1.707         52        640:  56%|█████▌    | 98/176 [13:32<10:38,  
+8.18s/it]
+        1/5         0G      1.637      3.389      1.705         54        640:  56%|█████▌    | 98/176 [13:41<10:38,  
+8.18s/it]
+        1/5         0G      1.637      3.389      1.705         54        640:  56%|█████▋    | 99/176 [13:41<10:38,  
+8.29s/it]
+        1/5         0G      1.637      3.386      1.704         51        640:  56%|█████▋    | 99/176 [13:49<10:38,  
+8.29s/it]
+        1/5         0G      1.637      3.386      1.704         51        640:  57%|█████▋    | 100/176 [13:49<10:32,  
+8.32s/it]
+        1/5         0G      1.636       3.38      1.702         51        640:  57%|█████▋    | 100/176 [13:57<10:32,  
+8.32s/it]
+        1/5         0G      1.636       3.38      1.702         51        640:  57%|█████▋    | 101/176 [13:57<10:20,  
+8.27s/it]
+        1/5         0G      1.636      3.375      1.702         68        640:  57%|█████▋    | 101/176 [14:05<10:20,  
+8.27s/it]
+        1/5         0G      1.636      3.375      1.702         68        640:  58%|█████▊    | 102/176 [14:05<10:12,  
+8.28s/it]
+        1/5         0G      1.635      3.368      1.701         52        640:  58%|█████▊    | 102/176 [14:14<10:12,  
+8.28s/it]
+        1/5         0G      1.635      3.368      1.701         52        640:  59%|█████▊    | 103/176 [14:14<10:05,  
+8.30s/it]
+        1/5         0G      1.636      3.365      1.702         46        640:  59%|█████▊    | 103/176 [14:22<10:05,  
+8.30s/it]
+        1/5         0G      1.636      3.365      1.702         46        640:  59%|█████▉    | 104/176 [14:22<10:01,  
+8.35s/it]
+        1/5         0G      1.635      3.359        1.7         48        640:  59%|█████▉    | 104/176 [14:30<10:01,  
+8.35s/it]
+        1/5         0G      1.635      3.359        1.7         48        640:  60%|█████▉    | 105/176 [14:30<09:50,  
+8.32s/it]
+        1/5         0G      1.633      3.354      1.698         54        640:  60%|█████▉    | 105/176 [14:39<09:50,  
+8.32s/it]
+        1/5         0G      1.633      3.354      1.698         54        640:  60%|██████    | 106/176 [14:39<09:45,  
+8.36s/it]
+        1/5         0G      1.633      3.349      1.698         53        640:  60%|██████    | 106/176 [14:47<09:45,  
+8.36s/it]
+        1/5         0G      1.633      3.349      1.698         53        640:  61%|██████    | 107/176 [14:47<09:36,  
+8.35s/it]
+        1/5         0G      1.634      3.346        1.7         44        640:  61%|██████    | 107/176 [14:55<09:36,  
+8.35s/it]
+        1/5         0G      1.634      3.346        1.7         44        640:  61%|██████▏   | 108/176 [14:55<09:24,  
+8.30s/it]
+        1/5         0G      1.632      3.339      1.697         49        640:  61%|██████▏   | 108/176 [15:04<09:24,  
+8.30s/it]
+        1/5         0G      1.632      3.339      1.697         49        640:  62%|██████▏   | 109/176 [15:04<09:14,  
+8.28s/it]
+        1/5         0G       1.63      3.333      1.696         50        640:  62%|██████▏   | 109/176 [15:12<09:14,  
+8.28s/it]
+        1/5         0G       1.63      3.333      1.696         50        640:  62%|██████▎   | 110/176 [15:12<09:08,  
+8.31s/it]
+        1/5         0G      1.628       3.33      1.696         38        640:  62%|██████▎   | 110/176 [15:20<09:08,  
+8.31s/it]
+        1/5         0G      1.628       3.33      1.696         38        640:  63%|██████▎   | 111/176 [15:20<08:59,  
+8.30s/it]
+        1/5         0G      1.626      3.325      1.695         52        640:  63%|██████▎   | 111/176 [15:29<08:59,  
+8.30s/it]
+        1/5         0G      1.626      3.325      1.695         52        640:  64%|██████▎   | 112/176 [15:29<08:49,  
+8.27s/it]
+        1/5         0G      1.626      3.321      1.696         35        640:  64%|██████▎   | 112/176 [15:37<08:49,  
+8.27s/it]
+        1/5         0G      1.626      3.321      1.696         35        640:  64%|██████▍   | 113/176 [15:37<08:39,  
+8.25s/it]
+        1/5         0G      1.627      3.317      1.696         42        640:  64%|██████▍   | 113/176 [15:45<08:39,  
+8.25s/it]
+        1/5         0G      1.627      3.317      1.696         42        640:  65%|██████▍   | 114/176 [15:45<08:27,  
+8.19s/it]
+        1/5         0G      1.627      3.313      1.696         43        640:  65%|██████▍   | 114/176 [15:53<08:27,  
+8.19s/it]
+        1/5         0G      1.627      3.313      1.696         43        640:  65%|██████▌   | 115/176 [15:53<08:20,  
+8.20s/it]
+        1/5         0G      1.627       3.31      1.696         49        640:  65%|██████▌   | 115/176 [16:01<08:20,  
+8.20s/it]
+        1/5         0G      1.627       3.31      1.696         49        640:  66%|██████▌   | 116/176 [16:01<08:12,  
+8.21s/it]
+        1/5         0G      1.627      3.309      1.696         46        640:  66%|██████▌   | 116/176 [16:09<08:12,  
+8.21s/it]
+        1/5         0G      1.627      3.309      1.696         46        640:  66%|██████▋   | 117/176 [16:09<08:04,  
+8.21s/it]
+        1/5         0G      1.627      3.304      1.696         50        640:  66%|██████▋   | 117/176 [16:18<08:04,  
+8.21s/it]
+        1/5         0G      1.627      3.304      1.696         50        640:  67%|██████▋   | 118/176 [16:18<07:57,  
+8.23s/it]
+        1/5         0G      1.628      3.302      1.697         55        640:  67%|██████▋   | 118/176 [16:27<07:57,  
+8.23s/it]
+        1/5         0G      1.628      3.302      1.697         55        640:  68%|██████▊   | 119/176 [16:27<07:59,  
+8.41s/it]
+        1/5         0G      1.628        3.3      1.698         36        640:  68%|██████▊   | 119/176 [16:35<07:59,  
+8.41s/it]
+        1/5         0G      1.628        3.3      1.698         36        640:  68%|██████▊   | 120/176 [16:35<07:54,  
+8.47s/it]
+        1/5         0G      1.627      3.294      1.697         66        640:  68%|██████▊   | 120/176 [16:44<07:54,  
+8.47s/it]
+        1/5         0G      1.627      3.294      1.697         66        640:  69%|██████▉   | 121/176 [16:44<07:47,  
+8.50s/it]
+        1/5         0G      1.627      3.288      1.698         56        640:  69%|██████▉   | 121/176 [16:52<07:47,  
+8.50s/it]
+        1/5         0G      1.627      3.288      1.698         56        640:  69%|██████▉   | 122/176 [16:52<07:40,  
+8.53s/it]
+        1/5         0G      1.628      3.282      1.698         46        640:  69%|██████▉   | 122/176 [17:01<07:40,  
+8.53s/it]
+        1/5         0G      1.628      3.282      1.698         46        640:  70%|██████▉   | 123/176 [17:01<07:36,  
+8.61s/it]
+        1/5         0G      1.629      3.278      1.698         48        640:  70%|██████▉   | 123/176 [17:10<07:36,  
+8.61s/it]
+        1/5         0G      1.629      3.278      1.698         48        640:  70%|███████   | 124/176 [17:10<07:35,  
+8.77s/it]
+        1/5         0G       1.63      3.273      1.699         68        640:  70%|███████   | 124/176 [17:19<07:35,  
+8.77s/it]
+        1/5         0G       1.63      3.273      1.699         68        640:  71%|███████   | 125/176 [17:19<07:25,  
+8.74s/it]
+        1/5         0G      1.631       3.27      1.699         78        640:  71%|███████   | 125/176 [17:28<07:25,  
+8.74s/it]
+        1/5         0G      1.631       3.27      1.699         78        640:  72%|███████▏  | 126/176 [17:28<07:18,  
+8.77s/it]
+        1/5         0G      1.629      3.266      1.699         33        640:  72%|███████▏  | 126/176 [17:36<07:18,  
+8.77s/it]
+        1/5         0G      1.629      3.266      1.699         33        640:  72%|███████▏  | 127/176 [17:36<07:05,  
+8.68s/it]
+        1/5         0G      1.631      3.264      1.699         46        640:  72%|███████▏  | 127/176 [17:45<07:05,  
+8.68s/it]
+        1/5         0G      1.631      3.264      1.699         46        640:  73%|███████▎  | 128/176 [17:45<06:57,  
+8.69s/it]
+        1/5         0G      1.632      3.261      1.699         47        640:  73%|███████▎  | 128/176 [17:54<06:57,  
+8.69s/it]
+        1/5         0G      1.632      3.261      1.699         47        640:  73%|███████▎  | 129/176 [17:54<06:48,  
+8.70s/it]
+        1/5         0G      1.632      3.258        1.7         51        640:  73%|███████▎  | 129/176 [18:02<06:48,  
+8.70s/it]
+        1/5         0G      1.632      3.258        1.7         51        640:  74%|███████▍  | 130/176 [18:02<06:36,  
+8.62s/it]
+        1/5         0G      1.633      3.255        1.7         53        640:  74%|███████▍  | 130/176 [18:10<06:36,  
+8.62s/it]
+        1/5         0G      1.633      3.255        1.7         53        640:  74%|███████▍  | 131/176 [18:10<06:18,  
+8.41s/it]
+        1/5         0G      1.632      3.251      1.699         49        640:  74%|███████▍  | 131/176 [18:18<06:18,  
+8.41s/it]
+        1/5         0G      1.632      3.251      1.699         49        640:  75%|███████▌  | 132/176 [18:18<05:58,  
+8.14s/it]
+        1/5         0G      1.631      3.247      1.698         55        640:  75%|███████▌  | 132/176 [18:25<05:58,  
+8.14s/it]
+        1/5         0G      1.631      3.247      1.698         55        640:  76%|███████▌  | 133/176 [18:25<05:40,  
+7.92s/it]
+        1/5         0G      1.631      3.243      1.699         46        640:  76%|███████▌  | 133/176 [18:34<05:40,  
+7.92s/it]
+        1/5         0G      1.631      3.243      1.699         46        640:  76%|███████▌  | 134/176 [18:34<05:45,  
+8.23s/it]
+        1/5         0G      1.631      3.238      1.699         58        640:  76%|███████▌  | 134/176 [18:42<05:45,  
+8.23s/it]
+        1/5         0G      1.631      3.238      1.699         58        640:  77%|███████▋  | 135/176 [18:42<05:40,  
+8.32s/it]
+        1/5         0G      1.631      3.235      1.699         50        640:  77%|███████▋  | 135/176 [18:51<05:40,  
+8.32s/it]
+        1/5         0G      1.631      3.235      1.699         50        640:  77%|███████▋  | 136/176 [18:51<05:34,  
+8.36s/it]
+        1/5         0G      1.631       3.23      1.698         51        640:  77%|███████▋  | 136/176 [18:59<05:34,  
+8.36s/it]
+        1/5         0G      1.631       3.23      1.698         51        640:  78%|███████▊  | 137/176 [18:59<05:26,  
+8.37s/it]
+        1/5         0G       1.63      3.226      1.698         45        640:  78%|███████▊  | 137/176 [19:09<05:26,  
+8.37s/it]
+        1/5         0G       1.63      3.226      1.698         45        640:  78%|███████▊  | 138/176 [19:09<05:28,  
+8.64s/it]
+        1/5         0G      1.629      3.219      1.697         53        640:  78%|███████▊  | 138/176 [19:17<05:28,  
+8.64s/it]
+        1/5         0G      1.629      3.219      1.697         53        640:  79%|███████▉  | 139/176 [19:17<05:19,  
+8.63s/it]
+        1/5         0G      1.629      3.217      1.697         46        640:  79%|███████▉  | 139/176 [19:26<05:19,  
+8.63s/it]
+        1/5         0G      1.629      3.217      1.697         46        640:  80%|███████▉  | 140/176 [19:26<05:10,  
+8.63s/it]
+        1/5         0G      1.629      3.213      1.698         46        640:  80%|███████▉  | 140/176 [19:34<05:10,  
+8.63s/it]
+        1/5         0G      1.629      3.213      1.698         46        640:  80%|████████  | 141/176 [19:34<04:57,  
+8.51s/it]
+        1/5         0G      1.628       3.21      1.697         45        640:  80%|████████  | 141/176 [19:44<04:57,  
+8.51s/it]
+        1/5         0G      1.628       3.21      1.697         45        640:  81%|████████  | 142/176 [19:44<05:00,  
+8.85s/it]
+        1/5         0G      1.629      3.207      1.697         51        640:  81%|████████  | 142/176 [19:51<05:00,  
+8.85s/it]
+        1/5         0G      1.629      3.207      1.697         51        640:  81%|████████▏ | 143/176 [19:51<04:41,  
+8.53s/it]
+        1/5         0G      1.627      3.203      1.696         53        640:  81%|████████▏ | 143/176 [20:00<04:41,  
+8.53s/it]
+        1/5         0G      1.627      3.203      1.696         53        640:  82%|████████▏ | 144/176 [20:00<04:30,  
+8.44s/it]
+        1/5         0G      1.626      3.197      1.695         60        640:  82%|████████▏ | 144/176 [20:09<04:30,  
+8.44s/it]
+        1/5         0G      1.626      3.197      1.695         60        640:  82%|████████▏ | 145/176 [20:09<04:26,  
+8.58s/it]
+        1/5         0G      1.626      3.193      1.695         48        640:  82%|████████▏ | 145/176 [20:18<04:26,  
+8.58s/it]
+        1/5         0G      1.626      3.193      1.695         48        640:  83%|████████▎ | 146/176 [20:18<04:21,  
+8.71s/it]
+        1/5         0G      1.625       3.19      1.695         47        640:  83%|████████▎ | 146/176 [20:27<04:21,  
+8.71s/it]
+        1/5         0G      1.625       3.19      1.695         47        640:  84%|████████▎ | 147/176 [20:27<04:16,  
+8.84s/it]
+        1/5         0G      1.626      3.186      1.695         59        640:  84%|████████▎ | 147/176 [20:36<04:16,  
+8.84s/it]
+        1/5         0G      1.626      3.186      1.695         59        640:  84%|████████▍ | 148/176 [20:36<04:11,  
+8.99s/it]
+        1/5         0G      1.626      3.181      1.695         47        640:  84%|████████▍ | 148/176 [20:45<04:11,  
+8.99s/it]
+        1/5         0G      1.626      3.181      1.695         47        640:  85%|████████▍ | 149/176 [20:45<04:00,  
+8.91s/it]
+        1/5         0G      1.627      3.178      1.695         47        640:  85%|████████▍ | 149/176 [20:53<04:00,  
+8.91s/it]
+        1/5         0G      1.627      3.178      1.695         47        640:  85%|████████▌ | 150/176 [20:53<03:50,  
+8.85s/it]
+        1/5         0G      1.626      3.173      1.696         42        640:  85%|████████▌ | 150/176 [21:02<03:50,  
+8.85s/it]
+        1/5         0G      1.626      3.173      1.696         42        640:  86%|████████▌ | 151/176 [21:02<03:42,  
+8.88s/it]
+        1/5         0G      1.627      3.169      1.696         56        640:  86%|████████▌ | 151/176 [21:11<03:42,  
+8.88s/it]
+        1/5         0G      1.627      3.169      1.696         56        640:  86%|████████▋ | 152/176 [21:11<03:32,  
+8.85s/it]
+        1/5         0G      1.626      3.164      1.696         60        640:  86%|████████▋ | 152/176 [21:20<03:32,  
+8.85s/it]
+        1/5         0G      1.626      3.164      1.696         60        640:  87%|████████▋ | 153/176 [21:20<03:23,  
+8.84s/it]
+        1/5         0G      1.625       3.16      1.696         44        640:  87%|████████▋ | 153/176 [21:29<03:23,  
+8.84s/it]
+        1/5         0G      1.625       3.16      1.696         44        640:  88%|████████▊ | 154/176 [21:29<03:12,  
+8.77s/it]
+        1/5         0G      1.625      3.156      1.696         50        640:  88%|████████▊ | 154/176 [21:37<03:12,  
+8.77s/it]
+        1/5         0G      1.625      3.156      1.696         50        640:  88%|████████▊ | 155/176 [21:37<03:01,  
+8.64s/it]
+        1/5         0G      1.625      3.153      1.696         60        640:  88%|████████▊ | 155/176 [21:45<03:01,  
+8.64s/it]
+        1/5         0G      1.625      3.153      1.696         60        640:  89%|████████▊ | 156/176 [21:45<02:51,  
+8.60s/it]
+        1/5         0G      1.625      3.151      1.697         38        640:  89%|████████▊ | 156/176 [21:54<02:51,  
+8.60s/it]
+        1/5         0G      1.625      3.151      1.697         38        640:  89%|████████▉ | 157/176 [21:54<02:45,  
+8.71s/it]
+        1/5         0G      1.627      3.148      1.698         44        640:  89%|████████▉ | 157/176 [22:03<02:45,  
+8.71s/it]
+        1/5         0G      1.627      3.148      1.698         44        640:  90%|████████▉ | 158/176 [22:03<02:37,  
+8.75s/it]
+        1/5         0G      1.626      3.144      1.699         51        640:  90%|████████▉ | 158/176 [22:12<02:37,  
+8.75s/it]
+        1/5         0G      1.626      3.144      1.699         51        640:  90%|█████████ | 159/176 [22:12<02:29,  
+8.78s/it]
+        1/5         0G      1.627      3.142        1.7         42        640:  90%|█████████ | 159/176 [22:23<02:29,  
+8.78s/it]
+        1/5         0G      1.627      3.142        1.7         42        640:  91%|█████████ | 160/176 [22:23<02:29,  
+9.34s/it]
+        1/5         0G      1.627      3.138        1.7         64        640:  91%|█████████ | 160/176 [22:33<02:29,  
+9.34s/it]
+        1/5         0G      1.627      3.138        1.7         64        640:  91%|█████████▏| 161/176 [22:33<02:24,  
+9.62s/it]
+        1/5         0G      1.627      3.134      1.699         57        640:  91%|█████████▏| 161/176 [22:42<02:24,  
+9.62s/it]
+        1/5         0G      1.627      3.134      1.699         57        640:  92%|█████████▏| 162/176 [22:42<02:11,  
+9.36s/it]
+        1/5         0G      1.627      3.132      1.699         41        640:  92%|█████████▏| 162/176 [22:50<02:11,  
+9.36s/it]
+        1/5         0G      1.627      3.132      1.699         41        640:  93%|█████████▎| 163/176 [22:50<01:55,  
+8.86s/it]
+        1/5         0G      1.626      3.129      1.699         50        640:  93%|█████████▎| 163/176 [22:57<01:55,  
+8.86s/it]
+        1/5         0G      1.626      3.129      1.699         50        640:  93%|█████████▎| 164/176 [22:57<01:41,  
+8.43s/it]
+        1/5         0G      1.626      3.127      1.698         40        640:  93%|█████████▎| 164/176 [23:05<01:41,  
+8.43s/it]
+        1/5         0G      1.626      3.127      1.698         40        640:  94%|█████████▍| 165/176 [23:05<01:30,  
+8.24s/it]
+        1/5         0G      1.627      3.125      1.699         51        640:  94%|█████████▍| 165/176 [23:14<01:30,  
+8.24s/it]
+        1/5         0G      1.627      3.125      1.699         51        640:  94%|█████████▍| 166/176 [23:14<01:24,  
+8.42s/it]
+        1/5         0G      1.627      3.122      1.699         52        640:  94%|█████████▍| 166/176 [23:22<01:24,  
+8.42s/it]
+        1/5         0G      1.627      3.122      1.699         52        640:  95%|█████████▍| 167/176 [23:22<01:15,  
+8.42s/it]
+        1/5         0G      1.626      3.118      1.699         56        640:  95%|█████████▍| 167/176 [23:30<01:15,  
+8.42s/it]
+        1/5         0G      1.626      3.118      1.699         56        640:  95%|█████████▌| 168/176 [23:30<01:07,  
+8.41s/it]
+        1/5         0G      1.627      3.115      1.699         65        640:  95%|█████████▌| 168/176 [23:39<01:07,  
+8.41s/it]
+        1/5         0G      1.627      3.115      1.699         65        640:  96%|█████████▌| 169/176 [23:39<00:59,  
+8.46s/it]
+        1/5         0G      1.628      3.112      1.699         62        640:  96%|█████████▌| 169/176 [23:48<00:59,  
+8.46s/it]
+        1/5         0G      1.628      3.112      1.699         62        640:  97%|█████████▋| 170/176 [23:48<00:51,  
+8.50s/it]
+        1/5         0G      1.628      3.109        1.7         53        640:  97%|█████████▋| 170/176 [23:57<00:51,  
+8.50s/it]
+        1/5         0G      1.628      3.109        1.7         53        640:  97%|█████████▋| 171/176 [23:57<00:44,  
+8.85s/it]
+        1/5         0G       1.63      3.106        1.7         62        640:  97%|█████████▋| 171/176 [24:06<00:44,  
+8.85s/it]
+        1/5         0G       1.63      3.106        1.7         62        640:  98%|█████████▊| 172/176 [24:06<00:35,  
+8.81s/it]
+        1/5         0G      1.629      3.102        1.7         60        640:  98%|█████████▊| 172/176 [24:13<00:35,  
+8.81s/it]
+        1/5         0G      1.629      3.102        1.7         60        640:  98%|█████████▊| 173/176 [24:13<00:25,  
+8.36s/it]
+        1/5         0G      1.629      3.101      1.701         37        640:  98%|█████████▊| 173/176 [24:20<00:25,  
+8.36s/it]
+        1/5         0G      1.629      3.101      1.701         37        640:  99%|█████████▉| 174/176 [24:20<00:16,  
+8.03s/it]
+        1/5         0G       1.63        3.1      1.701         47        640:  99%|█████████▉| 174/176 [24:28<00:16,  
+8.03s/it]
+        1/5         0G       1.63        3.1      1.701         47        640:  99%|█████████▉| 175/176 [24:28<00:07,  
+7.76s/it]
+        1/5         0G       1.63      3.096      1.701         44        640:  99%|█████████▉| 175/176 [24:34<00:07,  
+7.76s/it]
+        1/5         0G       1.63      3.096      1.701         44        640: 100%|██████████| 176/176 [24:34<00:00,  
+7.32s/it]
+        1/5         0G       1.63      3.096      1.701         44        640: 100%|██████████| 176/176 [24:34<00:00,  
+8.38s/it]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/17 
+[00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   6%|▌         | 1/17 
+[00:06<01:37,  6.10s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  12%|█▏        | 2/17 
+[00:11<01:25,  5.72s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  18%|█▊        | 3/17 
+[00:17<01:22,  5.90s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  24%|██▎       | 4/17 
+[00:24<01:20,  6.16s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  29%|██▉       | 5/17 
+[00:31<01:16,  6.39s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  35%|███▌      | 6/17 
+[00:37<01:11,  6.51s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  41%|████      | 7/17 
+[00:44<01:06,  6.61s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  47%|████▋     | 8/17 
+[00:51<00:59,  6.56s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  53%|█████▎    | 9/17 
+[00:56<00:50,  6.33s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  59%|█████▉    | 10/17 
+[01:02<00:43,  6.17s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  65%|██████▍   | 11/17 
+[01:08<00:36,  6.05s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  71%|███████   | 12/17 
+[01:14<00:30,  6.09s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  76%|███████▋  | 13/17 
+[01:20<00:24,  6.13s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  82%|████████▏ | 14/17 
+[01:27<00:18,  6.28s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  88%|████████▊ | 15/17 
+[01:34<00:12,  6.37s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  94%|█████████▍| 16/17 
+[01:40<00:06,  6.49s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 17/17 
+[01:44<00:00,  5.59s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 17/17 
+[01:44<00:00,  6.14s/it]
+                   all        533        937      0.212       0.29      0.153     0.0625
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+
+  0%|          | 0/176 [00:00<?, ?it/s]
+        2/5         0G      1.628      2.941      1.751         38        640:   0%|          | 0/176 [00:08<?, ?it/s]
+        2/5         0G      1.628      2.941      1.751         38        640:   1%|          | 1/176 [00:08<23:50,  
+8.17s/it]
+        2/5         0G      1.811      3.093      1.796         59        640:   1%|          | 1/176 [00:16<23:50,  
+8.17s/it]
+        2/5         0G      1.811      3.093      1.796         59        640:   1%|          | 2/176 [00:16<24:11,  
+8.34s/it]
+        2/5         0G      1.753      2.967      1.757         57        640:   1%|          | 2/176 [00:24<24:11,  
+8.34s/it]
+        2/5         0G      1.753      2.967      1.757         57        640:   2%|▏         | 3/176 [00:24<23:42,  
+8.23s/it]
+        2/5         0G      1.755      2.949      1.788         46        640:   2%|▏         | 3/176 [00:33<23:42,  
+8.23s/it]
+        2/5         0G      1.755      2.949      1.788         46        640:   2%|▏         | 4/176 [00:33<23:57,  
+8.36s/it]
+        2/5         0G      1.755      2.881      1.775         64        640:   2%|▏         | 4/176 [00:41<23:57,  
+8.36s/it]
+        2/5         0G      1.755      2.881      1.775         64        640:   3%|▎         | 5/176 [00:41<23:49,  
+8.36s/it]
+        2/5         0G      1.729      2.846      1.747         49        640:   3%|▎         | 5/176 [00:49<23:49,  
+8.36s/it]
+        2/5         0G      1.729      2.846      1.747         49        640:   3%|▎         | 6/176 [00:49<23:35,  
+8.33s/it]
+        2/5         0G      1.722      2.789      1.743         48        640:   3%|▎         | 6/176 [00:58<23:35,  
+8.33s/it]
+        2/5         0G      1.722      2.789      1.743         48        640:   4%|▍         | 7/176 [00:58<23:43,  
+8.42s/it]
+        2/5         0G      1.703      2.765      1.728         64        640:   4%|▍         | 7/176 [01:07<23:43,  
+8.42s/it]
+        2/5         0G      1.703      2.765      1.728         64        640:   5%|▍         | 8/176 [01:07<23:57,  
+8.56s/it]
+        2/5         0G      1.688      2.763      1.722         58        640:   5%|▍         | 8/176 [01:15<23:57,  
+8.56s/it]
+        2/5         0G      1.688      2.763      1.722         58        640:   5%|▌         | 9/176 [01:15<23:22,  
+8.40s/it]
+        2/5         0G      1.685      2.748      1.727         40        640:   5%|▌         | 9/176 [01:23<23:22,  
+8.40s/it]
+        2/5         0G      1.685      2.748      1.727         40        640:   6%|▌         | 10/176 [01:23<23:06,  
+8.35s/it]
+        2/5         0G      1.689      2.716      1.725         52        640:   6%|▌         | 10/176 [01:31<23:06,  
+8.35s/it]
+        2/5         0G      1.689      2.716      1.725         52        640:   6%|▋         | 11/176 [01:31<22:41,  
+8.25s/it]
+        2/5         0G      1.679      2.695      1.712         62        640:   6%|▋         | 11/176 [01:39<22:41,  
+8.25s/it]
+        2/5         0G      1.679      2.695      1.712         62        640:   7%|▋         | 12/176 [01:39<22:32,  
+8.25s/it]
+        2/5         0G      1.666      2.683       1.71         41        640:   7%|▋         | 12/176 [01:48<22:32,  
+8.25s/it]
+        2/5         0G      1.666      2.683       1.71         41        640:   7%|▋         | 13/176 [01:48<22:21,  
+8.23s/it]
+        2/5         0G      1.658      2.673      1.704         63        640:   7%|▋         | 13/176 [01:56<22:21,  
+8.23s/it]
+        2/5         0G      1.658      2.673      1.704         63        640:   8%|▊         | 14/176 [01:56<22:25,  
+8.30s/it]
+        2/5         0G      1.649      2.646      1.693         65        640:   8%|▊         | 14/176 [02:05<22:25,  
+8.30s/it]
+        2/5         0G      1.649      2.646      1.693         65        640:   9%|▊         | 15/176 [02:05<22:33,  
+8.41s/it]
+        2/5         0G      1.652      2.638      1.697         43        640:   9%|▊         | 15/176 [02:13<22:33,  
+8.41s/it]
+        2/5         0G      1.652      2.638      1.697         43        640:   9%|▉         | 16/176 [02:13<22:40,  
+8.51s/it]
+        2/5         0G      1.652      2.634      1.692         50        640:   9%|▉         | 16/176 [02:22<22:40,  
+8.51s/it]
+        2/5         0G      1.652      2.634      1.692         50        640:  10%|▉         | 17/176 [02:22<22:30,  
+8.49s/it]
+        2/5         0G      1.641      2.624       1.69         39        640:  10%|▉         | 17/176 [02:30<22:30,  
+8.49s/it]
+        2/5         0G      1.641      2.624       1.69         39        640:  10%|█         | 18/176 [02:30<22:16,  
+8.46s/it]
+        2/5         0G      1.651      2.614       1.69         76        640:  10%|█         | 18/176 [02:39<22:16,  
+8.46s/it]
+        2/5         0G      1.651      2.614       1.69         76        640:  11%|█         | 19/176 [02:39<22:02,  
+8.42s/it]
+        2/5         0G      1.647      2.598      1.687         57        640:  11%|█         | 19/176 [02:47<22:02,  
+8.42s/it]
+        2/5         0G      1.647      2.598      1.687         57        640:  11%|█▏        | 20/176 [02:47<22:09,  
+8.52s/it]
+        2/5         0G      1.647      2.586      1.684         63        640:  11%|█▏        | 20/176 [02:56<22:09,  
+8.52s/it]
+        2/5         0G      1.647      2.586      1.684         63        640:  12%|█▏        | 21/176 [02:56<21:50,  
+8.45s/it]
+        2/5         0G      1.643      2.578      1.686         43        640:  12%|█▏        | 21/176 [03:04<21:50,  
+8.45s/it]
+        2/5         0G      1.643      2.578      1.686         43        640:  12%|█▎        | 22/176 [03:04<21:52,  
+8.52s/it]
+        2/5         0G      1.628      2.574      1.678         38        640:  12%|█▎        | 22/176 [03:13<21:52,  
+8.52s/it]
+        2/5         0G      1.628      2.574      1.678         38        640:  13%|█▎        | 23/176 [03:13<21:25,  
+8.40s/it]
+        2/5         0G      1.631      2.574      1.682         45        640:  13%|█▎        | 23/176 [03:21<21:25,  
+8.40s/it]
+        2/5         0G      1.631      2.574      1.682         45        640:  14%|█▎        | 24/176 [03:21<21:36,  
+8.53s/it]
+        2/5         0G      1.637       2.57       1.69         73        640:  14%|█▎        | 24/176 [03:30<21:36,  
+8.53s/it]
+        2/5         0G      1.637       2.57       1.69         73        640:  14%|█▍        | 25/176 [03:30<21:29,  
+8.54s/it]
+        2/5         0G      1.636      2.562      1.689         41        640:  14%|█▍        | 25/176 [03:39<21:29,  
+8.54s/it]
+        2/5         0G      1.636      2.562      1.689         41        640:  15%|█▍        | 26/176 [03:39<21:43,  
+8.69s/it]
+        2/5         0G      1.633      2.548      1.685         69        640:  15%|█▍        | 26/176 [03:47<21:43,  
+8.69s/it]
+        2/5         0G      1.633      2.548      1.685         69        640:  15%|█▌        | 27/176 [03:47<21:19,  
+8.58s/it]
+        2/5         0G      1.627      2.535       1.68         64        640:  15%|█▌        | 27/176 [03:56<21:19,  
+8.58s/it]
+        2/5         0G      1.627      2.535       1.68         64        640:  16%|█▌        | 28/176 [03:56<21:21,  
+8.66s/it]
+        2/5         0G      1.616      2.523      1.675         50        640:  16%|█▌        | 28/176 [04:04<21:21,  
+8.66s/it]
+        2/5         0G      1.616      2.523      1.675         50        640:  16%|█▋        | 29/176 [04:04<20:49,  
+8.50s/it]
+        2/5         0G      1.616      2.521      1.674         47        640:  16%|█▋        | 29/176 [04:13<20:49,  
+8.50s/it]
+        2/5         0G      1.616      2.521      1.674         47        640:  17%|█▋        | 30/176 [04:13<20:39,  
+8.49s/it]
+        2/5         0G      1.612      2.506      1.671         66        640:  17%|█▋        | 30/176 [04:21<20:39,  
+8.49s/it]
+        2/5         0G      1.612      2.506      1.671         66        640:  18%|█▊        | 31/176 [04:21<20:20,  
+8.42s/it]
+        2/5         0G      1.617      2.506      1.674         46        640:  18%|█▊        | 31/176 [04:31<20:20,  
+8.42s/it]
+        2/5         0G      1.617      2.506      1.674         46        640:  18%|█▊        | 32/176 [04:31<21:02,  
+8.76s/it]
+        2/5         0G      1.621      2.508      1.676         56        640:  18%|█▊        | 32/176 [04:39<21:02,  
+8.76s/it]
+        2/5         0G      1.621      2.508      1.676         56        640:  19%|█▉        | 33/176 [04:39<20:51,  
+8.75s/it]
+        2/5         0G      1.625      2.507      1.678         44        640:  19%|█▉        | 33/176 [04:47<20:51,  
+8.75s/it]
+        2/5         0G      1.625      2.507      1.678         44        640:  19%|█▉        | 34/176 [04:47<20:13,  
+8.55s/it]
+        2/5         0G      1.626      2.514      1.683         35        640:  19%|█▉        | 34/176 [04:56<20:13,  
+8.55s/it]
+        2/5         0G      1.626      2.514      1.683         35        640:  20%|█▉        | 35/176 [04:56<19:56,  
+8.49s/it]
+        2/5         0G      1.628      2.517      1.686         46        640:  20%|█▉        | 35/176 [05:05<19:56,  
+8.49s/it]
+        2/5         0G      1.628      2.517      1.686         46        640:  20%|██        | 36/176 [05:05<20:24,  
+8.75s/it]
+        2/5         0G      1.636      2.522      1.691         47        640:  20%|██        | 36/176 [05:14<20:24,  
+8.75s/it]
+        2/5         0G      1.636      2.522      1.691         47        640:  21%|██        | 37/176 [05:14<20:36,  
+8.89s/it]
+        2/5         0G      1.634      2.519       1.69         46        640:  21%|██        | 37/176 [05:22<20:36,  
+8.89s/it]
+        2/5         0G      1.634      2.519       1.69         46        640:  22%|██▏       | 38/176 [05:22<19:33,  
+8.50s/it]
+        2/5         0G      1.634      2.511      1.691         54        640:  22%|██▏       | 38/176 [05:30<19:33,  
+8.50s/it]
+        2/5         0G      1.634      2.511      1.691         54        640:  22%|██▏       | 39/176 [05:30<19:08,  
+8.38s/it]
+        2/5         0G      1.631       2.52       1.69         46        640:  22%|██▏       | 39/176 [05:39<19:08,  
+8.38s/it]
+        2/5         0G      1.631       2.52       1.69         46        640:  23%|██▎       | 40/176 [05:39<19:16,  
+8.50s/it]
+        2/5         0G      1.637       2.52      1.693         50        640:  23%|██▎       | 40/176 [05:47<19:16,  
+8.50s/it]
+        2/5         0G      1.637       2.52      1.693         50        640:  23%|██▎       | 41/176 [05:47<18:54,  
+8.40s/it]
+        2/5         0G      1.639      2.518      1.697         45        640:  23%|██▎       | 41/176 [05:55<18:54,  
+8.40s/it]
+        2/5         0G      1.639      2.518      1.697         45        640:  24%|██▍       | 42/176 [05:55<18:33,  
+8.31s/it]
+        2/5         0G      1.635      2.517      1.696         43        640:  24%|██▍       | 42/176 [06:03<18:33,  
+8.31s/it]
+        2/5         0G      1.635      2.517      1.696         43        640:  24%|██▍       | 43/176 [06:03<18:15,  
+8.24s/it]
+        2/5         0G      1.635      2.514      1.695         54        640:  24%|██▍       | 43/176 [06:11<18:15,  
+8.24s/it]
+        2/5         0G      1.635      2.514      1.695         54        640:  25%|██▌       | 44/176 [06:11<18:04,  
+8.22s/it]
+        2/5         0G      1.635      2.508      1.693         71        640:  25%|██▌       | 44/176 [06:19<18:04,  
+8.22s/it]
+        2/5         0G      1.635      2.508      1.693         71        640:  26%|██▌       | 45/176 [06:19<17:44,  
+8.13s/it]
+        2/5         0G      1.636      2.511      1.695         37        640:  26%|██▌       | 45/176 [06:27<17:44,  
+8.13s/it]
+        2/5         0G      1.636      2.511      1.695         37        640:  26%|██▌       | 46/176 [06:27<17:31,  
+8.09s/it]
+        2/5         0G      1.633      2.507      1.692         39        640:  26%|██▌       | 46/176 [06:35<17:31,  
+8.09s/it]
+        2/5         0G      1.633      2.507      1.692         39        640:  27%|██▋       | 47/176 [06:35<17:30,  
+8.14s/it]
+        2/5         0G      1.632      2.502      1.689         53        640:  27%|██▋       | 47/176 [06:44<17:30,  
+8.14s/it]
+        2/5         0G      1.632      2.502      1.689         53        640:  27%|██▋       | 48/176 [06:44<17:43,  
+8.31s/it]
+        2/5         0G      1.628      2.497      1.685         45        640:  27%|██▋       | 48/176 [06:54<17:43,  
+8.31s/it]
+        2/5         0G      1.628      2.497      1.685         45        640:  28%|██▊       | 49/176 [06:54<18:44,  
+8.85s/it]
+        2/5         0G      1.626      2.494      1.684         36        640:  28%|██▊       | 49/176 [07:03<18:44,  
+8.85s/it]
+        2/5         0G      1.626      2.494      1.684         36        640:  28%|██▊       | 50/176 [07:03<18:48,  
+8.96s/it]
+        2/5         0G      1.624      2.492      1.683         45        640:  28%|██▊       | 50/176 [07:12<18:48,  
+8.96s/it]
+        2/5         0G      1.624      2.492      1.683         45        640:  29%|██▉       | 51/176 [07:12<18:35,  
+8.93s/it]
+        2/5         0G      1.621      2.487       1.68         43        640:  29%|██▉       | 51/176 [07:22<18:35,  
+8.93s/it]
+        2/5         0G      1.621      2.487       1.68         43        640:  30%|██▉       | 52/176 [07:22<18:41,  
+9.05s/it]
+        2/5         0G      1.621      2.486      1.679         52        640:  30%|██▉       | 52/176 [07:29<18:41,  
+9.05s/it]
+        2/5         0G      1.621      2.486      1.679         52        640:  30%|███       | 53/176 [07:29<17:40,  
+8.63s/it]
+        2/5         0G      1.623      2.489      1.681         35        640:  30%|███       | 53/176 [07:37<17:40,  
+8.63s/it]
+        2/5         0G      1.623      2.489      1.681         35        640:  31%|███       | 54/176 [07:37<17:08,  
+8.43s/it]
+        2/5         0G      1.621      2.483      1.681         46        640:  31%|███       | 54/176 [07:48<17:08,  
+8.43s/it]

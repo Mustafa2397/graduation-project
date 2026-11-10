@@ -1,0 +1,25 @@
+﻿# data.yaml موحد لمكون Problem Detection
+# بيجمع الـ3 datasets الموجودة في "phase 2 _ data set" بدون نقل أو تعديل أي صور
+# كل class له رقم ثابت (0, 1, 2) ونفس الترتيب لازم يتطابق مع ملفات الـ.txt
+# path: المسار المطلق لفولدر "مشروع التخرج" (الفولدر الأب لـ ai-track)
+# عشان ultralytics يحل المسارات التحت دي بالنسبة له، مش بالنسبة لمجلد datasets الافتراضي بتاعه
+
+path: C:/Users/ANDALOS/Desktop/مشروع التخرج
+
+train:
+  - phase 2 _ data set/dataset/dataset/Pothole detection2/train/images
+  - phase 2 _ data set/dataset/dataset/Garbage detection1/Garbage Detection.v1i.yolov8/train/images
+  - phase 2 _ data set/dataset/dataset/puddle detection3/train/images
+
+val:
+  - phase 2 _ data set/dataset/dataset/Pothole detection2/valid/images
+  - phase 2 _ data set/dataset/dataset/Garbage detection1/Garbage Detection.v1i.yolov8/valid/images
+  - phase 2 _ data set/dataset/dataset/puddle detection3/valid/images
+
+test:
+  - phase 2 _ data set/dataset/dataset/Pothole detection2/test/images
+  - phase 2 _ data set/dataset/dataset/Garbage detection1/Garbage Detection.v1i.yolov8/test/images
+  - phase 2 _ data set/dataset/dataset/puddle detection3/test/images
+
+nc: 3
+names: ['pothole', 'garbage', 'puddle']
